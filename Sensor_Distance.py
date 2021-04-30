@@ -50,7 +50,7 @@ def pollPosition():
         pollDistance = distanceMath(start,end) #sends start and end times to math function to calculate distance in cm
         print("Current distance is:",pollDistance,"cm") #prints to console the distance currently measured
         checkThresh(pollDistance) #checks the distance against the set thresh hold
-        time.sleep(3) #sleeps 3 seconds to allow for stable measuring performance, can be slower or faster 3 sec seemed a good compromise
+        time.sleep(2) #sleeps 2 seconds to allow for stable measuring performance, can be slower or faster 3 sec seemed a good compromise
 
 def setThresh(): #runs same function as pollPosition but sets a global variable for the first time to set the threshhold that if exceeded triggers the alarm
     GPIO.output(TRIG, True)
